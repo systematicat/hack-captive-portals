@@ -9,8 +9,9 @@ The downside of course is you have to observe someone already authenticated, but
 lobby this may be less difficult than it seems.  
 
 ### Installation and usage
-Just download .sh script and run it. 
+You need `sipcalc` and `nmap` for this script. Then download .sh script and run it. 
 ```
+sudo apt -y install sipcalc nmap
 wget https://raw.githubusercontent.com/systematicat/hack-captive-portals/master/hack-captive.sh
 sudo chmod u+x hack-captive.sh
 sudo ./hack-captive.sh
