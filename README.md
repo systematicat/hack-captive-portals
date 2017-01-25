@@ -8,6 +8,10 @@ Spoofing a MAC is dependent on your network card and driver but most modern netw
 The downside of course is you have to observe someone already authenticated, but in places such as a crowded airport  
 lobby this may be less difficult than it seems.  
 
+<p align="center">
+    <img src=/screenshot.png alt="Hack Captive portal">
+</p>
+
 ### Installation and usage
 You need `sipcalc` and `nmap` for this script. Then download .sh script and run it. 
 ```
