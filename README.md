@@ -6,4 +6,5 @@ unrestricted access.
 All one needs to do is sniff traffic on the network, find a host that is authorized, and spoof its IP and MAC address.  
 Spoofing a MAC is dependent on your network card and driver but most modern network devices today support it.  
 The downside of course is you have to observe someone already authenticated, but in places such as a crowded airport  
-lobby this may be less difficult than it seems.
+lobby this may be less difficult than it seems.  
+Tested in Ubuntu 16.04 with different Captive portals in airports and hotels all over the world.
