@@ -7,7 +7,6 @@ All one needs to do is sniff traffic on the network, find a host that is authori
 Spoofing a MAC is dependent on your network card and driver but most modern network devices today support it.  
 The downside of course is you have to observe someone already authenticated, but in places such as a crowded airport  
 lobby this may be less difficult than it seems.  
-Tested in Ubuntu 16.04 with different Captive portals in airports and hotels all over the world.
 
 ### Installation and usage
 Just download .sh script and run it. 
@@ -16,3 +15,5 @@ wget https://raw.githubusercontent.com/systematicat/hack-captive-portals/master/
 sudo chmod u+x hack-captive.sh
 sudo ./hack-captive.sh
 ```
+
+> Tested in Ubuntu 16.04 with different Captive portals in airports and hotels all over the world.
