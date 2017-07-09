@@ -25,7 +25,7 @@ interface="$(ip -o -4 route show to default | awk '/dev/ {print $5}')"
 localip="$(ip -o -4 route get 1 | awk '/src/ {print $7}')"
 wifissid="$(iw dev "$interface" link | awk '/SSID/ {print $NF}')"
 gateway="$(ip -o -4 route show to default | awk '/via/ {print $3}')"
-bridge="$(ip -o -4 addr show dev "$interface" | awk '/brd/ {print $6}')"
+broadcast="$(ip -o -4 addr show dev "$interface" | awk '/brd/ {print $6}')"
 ipmask="$(ip -o -4 addr show dev "$interface" | awk '/inet/ {print $4}')"
 netmask="$(printf "%s\n" "$ipmask" | cut -d "/" -f 2)"
 netaddress="$(sipcalc "$ipmask" | awk '/Network address/ {print $NF}')"
@@ -96,7 +96,7 @@ function main() {
       ip link set dev "$interface" address "$newmacset"
       ip link set "$interface" up
       ip addr flush dev "$interface"
-      ip addr add "$newipset/$netmask" broadcast "$bridge" dev "$interface"
+      ip addr add "$newipset/$netmask" broadcast "$broadcast" dev "$interface"
       ip route add default via "$gateway"
       sleep 1
 
@@ -119,7 +119,7 @@ function main() {
   ip link set dev "$interface" address "$macaddress"
   ip link set "$interface" up
   ip addr flush dev "$interface"
-  ip addr add "$ipmask" broadcast "$bridge" dev "$interface"
+  ip addr add "$ipmask" broadcast "$broadcast" dev "$interface"
   ip route add default via "$gateway"
 }
 
