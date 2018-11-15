@@ -12,13 +12,19 @@ lobby this may be less difficult than it seems.
     <img src=/screenshot.png alt="Hack Captive portal">
 </p>
 
+### Fork information
+
+I am not the greatest bug fixer. However, I troubleshoot really good. The problem with this script is that if it fails to authenticate with the captive portal once,it cannot operate any further. This workaround fixes the issue by copying and removing the script every time it is used.
+
+
 ### Installation and usage
 You need `sipcalc` and `nmap` for this script. Then download .sh script and run it. 
 ```
 sudo apt -y install sipcalc nmap
 wget https://raw.githubusercontent.com/systematicat/hack-captive-portals/master/hack-captive.sh
-sudo chmod u+x hack-captive.sh
-sudo ./hack-captive.sh
+sudo chmod u+x setup.sh
+sudo ./setup.sh
+sudo capee.sh
 ```
 
-> Tested in Ubuntu 16.04 with different Captive portals in airports and hotels all over the world.
+> Tested in Elementary OS Juno (which is based on Ubuntu 18.04), and in Kali Linux with different Captive portals in lots of places.
